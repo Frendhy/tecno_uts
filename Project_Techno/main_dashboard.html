@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoftNova | Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+  />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#1F4E79",
+            secondary: "#F2F4F7",
+            accent: "#6CA66C",
+            text: "#ffffff",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #1F4E79 0%, #2a5a8a 100%);
+    }
+
+    .carousel-item {
+      display: none;
+    }
+
+    .carousel-item.active {
+      display: block;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body class="bg-secondary font-sans">
+  <!-- Header -->
+  <header class="gradient-bg text-white shadow-lg">
+    <div class="flex items-center justify-between px-6 py-4">
+      <h1 class="text-2xl font-bold">SoftNova Dashboard</h1>
+      <nav class="space-x-6 hidden md:block">
+        <a href="main_dashboard.html" class="hover:underline font-semibold">Home</a>
+        <a href="reviews.html" class="hover:underline">Reviews</a>
+        <a href="umkm_dashboard.html" class="hover:underline">Partners</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 px-6 gradient-bg text-white">
+    <h2 class="text-4xl font-bold mb-4">Empowering Entrepreneurs Worldwide</h2>
+    <p class="max-w-2xl mx-auto text-lg text-gray-200">
+      Join thousands of business owners using SoftNova to grow, sell, and succeed
+      in the digital marketplace.
+    </p>
+    <button
+      class="mt-6 bg-accent text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition"
+    >
+      Get Started
+    </button>
+  </section>
+
+  <!-- Entrepreneur Carousel -->
+  <section class="max-w-5xl mx-auto py-12 px-6">
+    <h3 class="text-2xl font-bold text-primary text-center mb-8">
+      Meet Our Entrepreneurs
+    </h3>
+
+    <div class="relative bg-white rounded-xl shadow-md overflow-hidden">
+      <!-- Carousel Items -->
+      <div id="carousel" class="p-8">
+        <div class="carousel-item active text-center">
+          <img
+            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df"
+            alt="Entrepreneur 1"
+            class="w-40 h-40 object-cover rounded-full mx-auto mb-4"
+          />
+          <h4 class="text-lg font-semibold text-gray-800">
+            Aisha Tan — Founder of BatikArt
+          </h4>
+          <p class="text-gray-600 max-w-lg mx-auto mt-2">
+            “SoftNova helped me reach more international customers in months.
+            Their dashboard is intuitive and powerful!”
+          </p>
+        </div>
+
+        <div class="carousel-item text-center">
+          <img
+            src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
+            alt="Entrepreneur 2"
+            class="w-40 h-40 object-cover rounded-full mx-auto mb-4"
+          />
+          <h4 class="text-lg font-semibold text-gray-800">
+            Daniel Kim — Coffee Roaster
+          </h4>
+          <p class="text-gray-600 max-w-lg mx-auto mt-2">
+            “Managing my online sales became effortless. SoftNova made scaling
+            my business so much easier.”
+          </p>
+        </div>
+
+        <div class="carousel-item text-center">
+          <img
+            src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+            alt="Entrepreneur 3"
+            class="w-40 h-40 object-cover rounded-full mx-auto mb-4"
+          />
+          <h4 class="text-lg font-semibold text-gray-800">
+            Rina Yusuf — Eco Bags Indonesia
+          </h4>
+          <p class="text-gray-600 max-w-lg mx-auto mt-2">
+            “SoftNova connected me with eco-conscious buyers across the region.
+            Love their support team!”
+          </p>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <div
+        class="absolute top-1/2 transform -translate-y-1/2 left-4 text-primary cursor-pointer"
+        id="prevBtn"
+      >
+        <i class="fas fa-chevron-left text-2xl"></i>
+      </div>
+      <div
+        class="absolute top-1/2 transform -translate-y-1/2 right-4 text-primary cursor-pointer"
+        id="nextBtn"
+      >
+        <i class="fas fa-chevron-right text-2xl"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join as Partner Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h3 class="text-3xl font-bold text-primary mb-4">
+          Become a SoftNova Partner
+        </h3>
+        <p class="text-gray-600 mb-6">
+          Partner with us to bring your business online. Get access to exclusive
+          analytics, marketing tools, and a supportive entrepreneur community.
+        </p>
+        <ul class="space-y-3 text-gray-700">
+          <li>
+            <i class="fas fa-check text-accent mr-2"></i> Free setup & onboarding
+          </li>
+          <li>
+            <i class="fas fa-check text-accent mr-2"></i> Real-time sales tracking
+          </li>
+          <li>
+            <i class="fas fa-check text-accent mr-2"></i> 24/7 partner support
+          </li>
+        </ul>
+        <button
+          class="mt-6 bg-primary text-white px-8 py-3 rounded-lg hover:bg-blue-800 transition"
+        >
+          Join as Partner
+        </button>
+      </div>
+
+      
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer
+    class="mt-16 py-6 text-center text-gray-600 text-sm border-t border-gray-300"
+  >
+    © 2025 SoftNova. Empowering Entrepreneurs Everywhere.
+  </footer>
+
+  <script>
+    const items = document.querySelectorAll(".carousel-item");
+    let index = 0;
+
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      items[index].classList.remove("active");
+      index = (index + 1) % items.length;
+      items[index].classList.add("active");
+    });
+
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      items[index].classList.remove("active");
+      index = (index - 1 + items.length) % items.length;
+      items[index].classList.add("active");
+    });
+
+    // Auto-slide every 5s
+    setInterval(() => {
+      document.getElementById("nextBtn").click();
+    }, 5000);
+  </script>
+</body>
+
+</html>

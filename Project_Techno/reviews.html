@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoftNova | Reviews</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1F4E79',
+            secondary: '#F2F4F7',
+            accent: '#6CA66C',
+            text: '#ffffff'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #1F4E79 0%, #2a5a8a 100%);
+    }
+
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .star {
+      color: #FACC15;
+    }
+  </style>
+</head>
+
+<body class="bg-secondary font-sans">
+  <!-- Header -->
+  <header class="gradient-bg text-white shadow-lg">
+    <div class="flex items-center justify-between px-6 py-4">
+      <h1 class="text-2xl font-bold">SoftNova Reviews</h1>
+      <nav class="space-x-6 hidden md:block">
+        <a href="main_dashboard.html" class="hover:underline ">Home</a>
+        <a href="reviews.html" class="hover:underline font-semibold">Reviews</a>
+        <a href="umkm_dashboard.html" class="hover:underline">Partners</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Reviews Section -->
+  <main class="max-w-7xl mx-auto px-6 py-12">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-primary mb-2">What Our Entrepreneurs Say</h2>
+      <p class="text-gray-600">Real feedback from people growing their business with SoftNova</p>
+    </div>
+
+    <!-- Platform Tabs -->
+    <div class="flex justify-center space-x-4 mb-8 flex-wrap">
+      <button class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-800 transition">All Reviews</button>
+    </div>
+
+    <!-- Reviews Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Review Card -->
+      <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+        <div class="flex items-center space-x-3 mb-3">
+          <div class="h-10 w-10 bg-primary text-white flex items-center justify-center rounded-full">
+            <i class="fas fa-user"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800">Schn Buntak</h4>
+            <p class="text-sm text-gray-500">5 days ago</p>
+          </div>
+        </div>
+        <div class="flex text-yellow-400 mb-2">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+            class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="text-gray-700 text-sm mb-3">I am so happy to find SoftNova — affordable, efficient, and great customer
+          support!</p>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+        <div class="flex items-center space-x-3 mb-3">
+          <div class="h-10 w-10 bg-accent text-white flex items-center justify-center rounded-full">
+            <i class="fas fa-user"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800">Hadi Rizsi</h4>
+            <p class="text-sm text-gray-500">1 week ago</p>
+          </div>
+        </div>
+        <div class="flex text-yellow-400 mb-2">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+            class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="text-gray-700 text-sm mb-3">Amazing platform! Easy to use and helped my business grow fast.</p>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+        <div class="flex items-center space-x-3 mb-3">
+          <div class="h-10 w-10 bg-yellow-500 text-white flex items-center justify-center rounded-full">
+            <i class="fas fa-user"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800">Sergio Flores</h4>
+            <p class="text-sm text-gray-500">3 days ago</p>
+          </div>
+        </div>
+        <div class="flex text-yellow-400 mb-2">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        </div>
+        <p class="text-gray-700 text-sm mb-3">Todo en orden con SoftNova. Great experience with the sales dashboard.</p>
+      </div>
+
+      <!-- Additional Cards (4–6) -->
+      <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+        <div class="flex items-center space-x-3 mb-3">
+          <div class="h-10 w-10 bg-green-500 text-white flex items-center justify-center rounded-full">
+            <i class="fas fa-user"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800">Kalio</h4>
+            <p class="text-sm text-gray-500">6 days ago</p>
+          </div>
+        </div>
+        <div class="flex text-yellow-400 mb-2">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+            class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="text-gray-700 text-sm mb-3">This is one of the best business tools I’ve ever used!</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+        <div class="flex items-center space-x-3 mb-3">
+          <div class="h-10 w-10 bg-blue-500 text-white flex items-center justify-center rounded-full">
+            <i class="fas fa-user"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800">Isabella Salam</h4>
+            <p class="text-sm text-gray-500">2 weeks ago</p>
+          </div>
+        </div>
+        <div class="flex text-yellow-400 mb-2">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+            class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="text-gray-700 text-sm mb-3">This place is great! The support team is friendly and professional.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-md card-hover">
+        <div class="flex items-center space-x-3 mb-3">
+          <div class="h-10 w-10 bg-red-500 text-white flex items-center justify-center rounded-full">
+            <i class="fas fa-user"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800">Cheik Jem</h4>
+            <p class="text-sm text-gray-500">1 week ago</p>
+          </div>
+        </div>
+        <div class="flex text-yellow-400 mb-2">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+            class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="text-gray-700 text-sm mb-3">Top-tier app! I love SoftNova’s entrepreneur tools.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-16 py-6 text-center text-gray-600 text-sm border-t border-gray-300">
+    © 2025 SoftNova. Empowering Entrepreneurs Everywhere.
+  </footer>
+</body>
+
+</html>
